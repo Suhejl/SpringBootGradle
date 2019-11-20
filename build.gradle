@@ -3,7 +3,9 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 	id 'war'
+	id "org.sonarqube" version "2.8"
 }
+
 
 group = 'ch.nyp'
 version = '0.0.1-SNAPSHOT'
@@ -21,6 +23,12 @@ dependencies {
 	}
 	//AssertJ
 	testImplementation "org.assertj:assertj-core:3.13.2"
+}
+// PLEASE NOTE: git update-index --chmod=+x gradlew
+sonarqube {
+	properties {
+		property "sonar.projectKey", "Suhejl_SpringBootGradle"
+	}
 }
 
 test {
