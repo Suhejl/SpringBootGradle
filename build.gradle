@@ -46,7 +46,7 @@ docker{
 	name 'suhejl17/spring-app'
 	tags 'latest' //  deprecated, use 'tag'
 	dockerfile file('Dockerfile')
-	file war.archiveFile
+	files war.archiveFile
 	pull true
 	noCache true
 }
